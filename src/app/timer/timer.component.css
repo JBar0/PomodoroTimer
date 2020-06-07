@@ -1,0 +1,100 @@
+
+/*@cube-width: 80px;*/
+/*@cube-height: 124px;*/
+
+/* General reset and body */
+* { margin: 0px; padding: 0px; }
+body {
+  padding-top:80px;
+  background:#3f4157;
+  font-family: sans-serif;
+}
+/* 3D Clock */
+#clock{
+  padding-top:70px;
+  width:395px;
+  margin:0 auto;
+}
+.digit{
+  width: 90px;
+  height: 139px;
+  float: left;
+  overflow:hidden;
+}
+.cube-wrapper{
+  background:#21222d;
+  width: 1500px;
+  height: 500px;
+  float:left;
+  perspective: 500px;
+  padding-top:320px;
+  position:relative;
+  top: -308px;
+  left: -705px;
+}
+.cube {
+  width: 80px;
+  height: 124px;
+  transform-style: preserve-3d;
+}
+.cube.flip {
+ transition: all 450ms ease;
+}
+.f1, .f2 {
+  height: 124px;
+}
+.f1 {
+  transform: translateZ(62px);
+}
+
+.f2 {
+ transform: rotateX(90deg) translateZ(186px);
+}
+
+.cube.flip {
+transform: rotateX(-89deg);
+}
+
+.cube {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.f1, .f2 {
+  background:#3f4157;
+  transition: background 250ms ease;
+  color:#fff;
+  font-size:130px;
+  font-weight:300;
+  color: #fff;
+  line-height: 124px;
+
+}
+
+.cube.flip .f1 {
+  background: #272836
+}
+.cube.flip .f2 {
+  background: #3f4157;
+}
+
+.f2 {
+  background: #272836;
+
+}
+.separator{
+  float:left;
+  width:30px;
+  padding-top:46px;
+  text-align:center;
+}
+.separator .x, .separator .y{
+  background:#fff;
+  width:12px;
+  height:12px;
+  border-radius:2px;
+  margin:0 auto;
+}
+.separator .y{
+  margin-top:22px;
+}
